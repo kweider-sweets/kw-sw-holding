@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قيد التحديث والتطوير</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b1329; /* خلفية داكنة احترافية */
+            color: #f8fafc;
+            text-align: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #ffb703; /* لون ذهبي */
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease-out;
+        }
+        p {
+            color: #cbd5e1;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            animation: fadeInUp 1.2s ease-out;
+        }
+        
+        /* تنسيق معرض الصور ليصبح عمودياً (فوق بعض) */
+        .image-gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 35px;
+            margin-bottom: 50px;
+        }
+        
+        /* الحركات والتأثيرات الخاصة بالصور */
+        .image-gallery img {
+            width: 100%;
+            max-width: 550px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            border: 2px solid #1e293b;
+            cursor: pointer;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+            animation: fadeInUp 1.5s ease-out;
+        }
+        
+        /* تأثير الحركة عند تمرير الماوس فوق الصورة */
+        .image-gallery img:hover {
+            transform: scale(1.03) translateY(-8px);
+            box-shadow: 0 20px 35px rgba(255, 183, 3, 0.25);
+        }
+
+        /* قسم بيانات الاتصال أسفل الصفحة */
+        .contact-info {
+            background-color: #1c2541;
+            padding: 30px;
+            border-radius: 16px;
+            margin-top: 50px;
+            border: 1px solid #3a506b;
+            text-align: right;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            animation: fadeInUp 1.8s ease-out;
+        }
+        .contact-info h3 {
+            color: #ffb703;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3a506b;
+            padding-bottom: 10px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        .contact-item {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .contact-item span.label {
+            color: #5bc0be; /* لون مميز للعناوين الفرعية */
+            font-weight: bold;
+            min-width: 130px;
+            display: inline-block;
+        }
+        .contact-item a {
+            color: #f8fafc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact-item a:hover {
+            color: #ffb703;
+        }
+        
+        /* نافذة التكبير الذكية (Lightbox) عند الضغط على الصورة */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            padding-top: 40px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(11, 19, 41, 0.96);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 85%;
+            max-width: 850px;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(255, 183, 3, 0.2);
+            animation: zoomIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: #ffb703;
+        }
+
+        /* حركات الظهور المتدرج للأنشطة والتفاعل */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .footer {
+            margin-top: 50px;
+            color: #64748b;
+            font-size: 0.9rem;
+            padding-top: 20px;
+        }
+
+        /* توافق تام مع شاشات الجوال */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .contact-info { text-align: center; }
+            .contact-item { flex-direction: column; gap: 5px; }
+            .modal-content { width: 95%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>الموقع قيد التحديث والتطوير</h1>
+        <p>نعمل حالياً على بناء وتطوير منصتنا الرقمية لتقديم أفضل تجربة لكم. سنكون معكم قريباً جداً.</p>
+        
+        <div class="image-gallery">
+            <img src="photo1.jpg" alt="واجهة الموقع قريباً 1" onclick="openModal(this.src)">
+            <img src="photo2.jpg" alt="واجهة الموقع قريباً 2" onclick="openModal(this.src)">
+        </div>
+        
+        <div class="contact-info">
+            <h3>معلومات الاتصال</h3>
+            <div class="contact-item">
+                <span class="label">المركز الرئيسي:</span>
+                <span>الميدان - جزماتية</span>
+            </div>
+            <div class="contact-item">
+                <span class="label">المعمل:</span>
+                <span>ريف دمشق - كسوة</span>
+            </div>
+            <div class="contact-item">
+                <span class="label">أرقام الهاتف:</span>
+                <span>
+                    <a href="tel:00963933614810" dir="ltr">00963933614810</a> &nbsp;|&nbsp; 
+                    <a href="tel:00963955404404" dir="ltr">00963955404404</a>
+                </span>
+            </div>
+            <div class="contact-item">
+                <span class="label">الموقع الإلكتروني:</span>
+                <span><a href="https://www.kw-sw.com" target="_blank">www.kw-sw.com</a></span>
+            </div>
+            <div class="contact-item">
+                <span class="label">البريد الإلكتروني:</span>
+                <span><a href="mailto:info@kw-sw.com">info@kw-sw.com</a></span>
+            </div>
+        </div>
+        
+        <div class="footer">
+            &copy; 2026 جميع الحقوق محفوظة.
+        </div>
+    </div>
+
+    <div id="myModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="imgModal">
+    </div>
+
+    <script>
+        // وظيفة تفتح النافذة وتكبر الصورة عند الضغط عليها
+        function openModal(src) {
+            document.getElementById("myModal").style.display = "block";
+            document.getElementById("imgModal").src = src;
+        }
+
+        // وظيفة تغلق النافذة عند الضغط في أي مكان فارغ أو على زر الإغلاق
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+        
+        // إغلاق التكبير تلقائياً إذا ضغط المستخدم على زر Escape في الكيبورد
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
