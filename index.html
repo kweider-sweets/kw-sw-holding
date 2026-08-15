@@ -1,236 +1,244 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kweider Damascene Sweets | Links</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <title>قيد التحديث والتطوير</title>
     <style>
         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b1329; /* خلفية داكنة احترافية */
+            color: #f8fafc;
+            text-align: center;
+            padding: 40px 20px;
             margin: 0;
-            padding: 0;
-            background-color: #0a0a0a;
-            color: #ffffff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #ffb703; /* لون ذهبي */
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease-out;
+        }
+        p {
+            color: #cbd5e1;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            animation: fadeInUp 1.2s ease-out;
+        }
+        
+        /* تنسيق معرض الصور ليصبح عمودياً (فوق بعض) */
+        .image-gallery {
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 100vh;
-            font-family: 'Cairo', sans-serif;
+            gap: 35px;
+            margin-bottom: 50px;
         }
         
-        .ar-font { font-family: Arial, Helvetica, sans-serif; }
-        .en-font { font-family: 'Cairo', sans-serif; }
-
-        .container {
+        /* الحركات والتأثيرات الخاصة بالصور */
+        .image-gallery img {
             width: 100%;
-            max-width: 480px;
-            padding: 20px 15px;
-            text-align: center;
-            box-sizing: border-box;
-        }
-
-        .top-logo {
-            max-width: 150px;
+            max-width: 550px;
             height: auto;
-            margin-bottom: 12px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            border: 2px solid #1e293b;
+            cursor: pointer;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+            animation: fadeInUp 1.5s ease-out;
+        }
+        
+        /* تأثير الحركة عند تمرير الماوس فوق الصورة */
+        .image-gallery img:hover {
+            transform: scale(1.03) translateY(-8px);
+            box-shadow: 0 20px 35px rgba(255, 183, 3, 0.25);
         }
 
-        .profile-img {
-            width: 110px; 
-            height: 110px;
-            border-radius: 50%;
-            object-fit: contain;
-            background-color: #000;
-            margin-bottom: 10px;
-            border: 2px solid #C5A059;
-            box-shadow: 0 0 15px rgba(197, 160, 89, 0.15);
-            padding: 3px;
+        /* قسم بيانات الاتصال أسفل الصفحة */
+        .contact-info {
+            background-color: #1c2541;
+            padding: 30px;
+            border-radius: 16px;
+            margin-top: 50px;
+            border: 1px solid #3a506b;
+            text-align: right;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            animation: fadeInUp 1.8s ease-out;
         }
-
-        .brand-title-ar {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-        }
-
-        .eid-offer {
-            font-size: 14px;
-            font-weight: bold;
-            color: #ffffff;
-            margin: 8px auto 15px auto;
-            background-color: transparent;
-            padding: 8px 20px;
-            border-radius: 8px;
-            border: 1px solid #C5A059;
-            display: inline-block;
-            font-family: Arial, sans-serif;
-        }
-
-        .subtitle {
-            font-size: 15px;
-            margin-bottom: 3px;
-            color: #cccccc;
-            letter-spacing: 0.5px;
-        }
-
-        .tagline {
-            font-size: 12px;
-            color: #C5A059;
+        .contact-info h3 {
+            color: #ffb703;
+            margin-top: 0;
             margin-bottom: 20px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            border-bottom: 2px solid #3a506b;
+            padding-bottom: 10px;
+            font-size: 1.4rem;
+            text-align: center;
         }
-
-        .grid-row {
+        .contact-item {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
             display: flex;
+            align-items: center;
             gap: 10px;
-            width: 100%;
-            margin-bottom: 10px;
         }
-
-        .link-btn-half {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 12px 5px;
-            background-color: transparent;
-            color: #ffffff;
+        .contact-item span.label {
+            color: #5bc0be; /* لون مميز للعناوين الفرعية */
+            font-weight: bold;
+            min-width: 130px;
+            display: inline-block;
+        }
+        .contact-item a {
+            color: #f8fafc;
             text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            border: 1px solid #444;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-            box-sizing: border-box;
+            transition: color 0.3s;
         }
-
-        .link-btn-half i {
-            font-size: 18px;
-            color: #C5A059;
+        .contact-item a:hover {
+            color: #ffb703;
         }
-
-        .link-btn-half:hover {
-            border-color: #C5A059;
-            background-color: rgba(197, 160, 89, 0.1);
-        }
-
-        .link-btn-full {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        
+        /* نافذة التكبير الذكية (Lightbox) عند الضغط على الصورة */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            padding-top: 40px;
+            left: 0;
+            top: 0;
             width: 100%;
-            padding: 14px;
-            margin-bottom: 10px;
-            background-color: transparent;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 600;
-            border: 1px solid #444;
-            border-radius: 30px;
-            transition: all 0.3s ease;
-            box-sizing: border-box;
-            position: relative;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(11, 19, 41, 0.96);
         }
-
-        .link-btn-full i {
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 85%;
+            max-width: 850px;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(255, 183, 3, 0.2);
+            animation: zoomIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .close {
             position: absolute;
-            left: 25px; 
-            font-size: 18px;
-            color: #C5A059;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: #ffb703;
         }
 
-        .link-btn-full:hover {
-            border-color: #C5A059;
-            background-color: rgba(197, 160, 89, 0.1);
+        /* حركات الظهور المتدرج للأنشطة والتفاعل */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
 
-        .whatsapp-btn {
-            border-color: #00b341;
-            color: #00b341;
-        }
-        .whatsapp-btn i { color: #00b341; }
-        .whatsapp-btn:hover {
-            border-color: #00e653;
-            color: #00e653;
-            background-color: rgba(0, 179, 65, 0.1);
+        .footer {
+            margin-top: 50px;
+            color: #64748b;
+            font-size: 0.9rem;
+            padding-top: 20px;
         }
 
-        .footer-info {
-            margin-top: 15px;
-            font-size: 11px;
-            color: #777;
-            line-height: 1.8;
-        }
-
-        .footer-address {
-            display: block; 
-            font-size: 14px; 
-            color: #aaaaaa;
-            text-decoration: none;
-            margin-bottom: 5px;
-            transition: color 0.3s ease;
-            font-weight: 600;
-        }
-
-        .footer-address:hover {
-            color: #C5A059; 
+        /* توافق تام مع شاشات الجوال */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .contact-info { text-align: center; }
+            .contact-item { flex-direction: column; gap: 5px; }
+            .modal-content { width: 95%; }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <img src="logo.webp" alt="Kweider Logo" class="top-logo">
-    <img src="kweider2026.webp" alt="Baklava" class="profile-img">
-    
-    <div class="brand-title-ar">قـويـدر للحلويات الدمشقية</div>
-    <div class="eid-offer">منتجات خاصة للتصدير</div>
-
-    <div class="subtitle">Kweider Damascene Sweets</div>
-    <div class="tagline">Authentic Damascene Taste Since 1969</div>
-
-    <div class="grid-row">
-        <a href="https://www.instagram.com/kwidersy?igsh=eTlqM2hxbWlwMnZi" class="link-btn-half" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-instagram"></i> Instagram
-        </a>
-        <a href="https://www.facebook.com/share/1HS3SioBjC/" class="link-btn-half" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-facebook-f"></i> Facebook
-        </a>
+    <div class="container">
+        <h1>الموقع قيد التحديث والتطوير</h1>
+        <p>نعمل حالياً على بناء وتطوير منصتنا الرقمية لتقديم أفضل تجربة لكم. سنكون معكم قريباً جداً.</p>
+        
+        <div class="image-gallery">
+            <img src="photo1.jpg" alt="واجهة الموقع قريباً 1" onclick="openModal(this.src)">
+            <img src="photo2.jpg" alt="واجهة الموقع قريباً 2" onclick="openModal(this.src)">
+        </div>
+        
+        <div class="contact-info">
+            <h3>معلومات الاتصال</h3>
+            <div class="contact-item">
+                <span class="label">المركز الرئيسي:</span>
+                <span>الميدان - جزماتية</span>
+            </div>
+            <div class="contact-item">
+                <span class="label">المعمل:</span>
+                <span>ريف دمشق - كسوة</span>
+            </div>
+            <div class="contact-item">
+                <span class="label">أرقام الهاتف:</span>
+                <span>
+                    <a href="tel:00963933614810" dir="ltr">00963933614810</a> &nbsp;|&nbsp; 
+                    <a href="tel:00963955404404" dir="ltr">00963955404404</a>
+                </span>
+            </div>
+            <div class="contact-item">
+                <span class="label">الموقع الإلكتروني:</span>
+                <span><a href="https://www.kw-sw.com" target="_blank">www.kw-sw.com</a></span>
+            </div>
+            <div class="contact-item">
+                <span class="label">البريد الإلكتروني:</span>
+                <span><a href="mailto:info@kw-sw.com">info@kw-sw.com</a></span>
+            </div>
+        </div>
+        
+        <div class="footer">
+            &copy; 2026 جميع الحقوق محفوظة.
+        </div>
     </div>
 
-    <div class="grid-row">
-        <a href="" class="link-btn-half" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-tiktok"></i> TikTok
-        </a>
-        <a href="https://www.google.com/maps?q=F7VX%2BP97,الميدان,دمشق,سوريا" class="link-btn-half" target="_blank" rel="noopener noreferrer">
-    <i class="fas fa-map-marker-alt"></i> Google Maps
-</a>
+    <div id="myModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="imgModal">
     </div>
 
-    <a href="https://wa.me/963955404404" class="link-btn-full whatsapp-btn" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i> WhatsApp
-    </a>
+    <script>
+        // وظيفة تفتح النافذة وتكبر الصورة عند الضغط عليها
+        function openModal(src) {
+            document.getElementById("myModal").style.display = "block";
+            document.getElementById("imgModal").src = src;
+        }
 
-    <a href="https://www.kw-sw.com" class="link-btn-full" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-globe"></i> Official Website
-    </a>
-
-    <div class="footer-info">
-        <a href="https://g.page/r/CflK53yJZHCoEBM" class="footer-address" target="_blank" rel="noopener noreferrer">
-            📍 Syria - Damascus - Midan
-        </a>
-        🕒 Opening Hours: 11:00 AM - 10:00 PM
-    </div>
-</div>
+        // وظيفة تغلق النافذة عند الضغط في أي مكان فارغ أو على زر الإغلاق
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+        
+        // إغلاق التكبير تلقائياً إذا ضغط المستخدم على زر Escape في الكيبورد
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+    </script>
 
 </body>
 </html>
